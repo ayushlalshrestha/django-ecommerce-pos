@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %} 
+	Product Details
+{% endblock %}
+
+
+{% block content %} 
+ <h3> Loginned as :  {{ login_status }}</h3>  
+    <div class='col-sm-5'>
+        <label for="p_name">Product Name: </label> <div id="p_name"> {{ product.product_name }} </div> </br>
+        <label for="comp_name">Company: </label> <div id="c_name"> {{ product.company_name }} </div> </br>
+        <label for="desc"></label> <div id="desc"> {{ product.description }} </div>  </br>
+        <label for="pri">Cost </label> <div id="pri"> {{ product.price }} </div> </br>
+    </div>
+    <div class='col-sm-7'><img src="http://127.0.0.1:8000/media/{{product.product_img}}" style="width:550px;height:300px;"></div>
+
+{% endblock %}

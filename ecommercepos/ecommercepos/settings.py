@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'artifice.tundra@gmail.com'
+EMAIL_HOST_PASSWORD = 'ayushr2323'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Application definition
 
@@ -37,8 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework', 
+    'crispy_forms',
     'sales',
-    'rest_framework',  
+    
 ]
 
 MIDDLEWARE = [

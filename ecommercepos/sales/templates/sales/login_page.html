@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+    {% load crispy_forms_tags %}
+{% block title %} 
+	Add New Product
+{% endblock %}
+
+
+{% block content %} 
+	<form action="{% url 'sales:login_process' %}" method = "POST">
+       {% csrf_token  %}
+       <label for="username" >Enter your UserName</label>
+       <input type="text" id="username" name="username" placeholder="username here" />
+
+       <label for="password" >Enter your UserName</label>
+       <input type="password" id="password" name="password" placeholder="password here" />
+
+       <button type="submit" class="btn btn-success">Login</button>
+	</form>
+
+{% endblock %}
